@@ -16,11 +16,9 @@
     <string name="score_points">Score Points</string>
     <string name="build_up_streaks">Build Up Streaks</string>
     <string name="title_activity_game">Play Facts Game</string>
-    <string name="how_to_play_desc">The objective of the game is to answer as many questions correctly
-    in 99 seconds.</string>
+    <string name="how_to_play_desc">The objective of the game is to answer as many questions correctly in 99 seconds.</string>
     <string name="score_points_desc">Each question you answer correctly increases your score by 5.</string>
-    <string name="build_up_streaks_desc1">The more questions you answer correctly in a row increases your
-    current streak which gives you a better score.</string>
+    <string name="build_up_streaks_desc1">The more questions you answer correctly in a row increases your current streak which gives you a better score.</string>
     <string name="build_up_streaks_desc2">Each correct answer is multiplied by your current streak.</string>
     <string name="build_up_streaks_desc3">Each question answered incorrectly resets your streak.</string>
     <string name="scores_desc"> All hail the champions of champions, the cream of the crop, our leader…</string>
