@@ -2,6 +2,7 @@
 <resources>
 
     <color name="background">#ebebeb</color>
+    <color name="font">#2c3e50</color>
     <color name="button">#2c3e50</color>
     <color name="button_pressed">#1e2a36</color>
     <color name="button_font">#ffffff</color>

@@ -56,6 +56,9 @@
         <item name="android:textSize">@dimen/title_font</item>
         <item name="android:textStyle">normal</item>
         <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="AppTitle" parent="Title">
         <item name="android:layout_marginBottom">@dimen/title_margin_bottom</item>
         <item name="android:layout_marginTop">@dimen/title_margin_top</item>
     </style>
@@ -87,6 +90,20 @@
         <item name="android:fontFamily">sans-serif-thin</item>
         <item name="android:textColor">@color/game_info_value_font</item>
         <item name="android:textSize">@dimen/game_info_value_font</item>
+    </style>
+
+    <style name="ScoresSubTitle" parent="FillWidth">
+        <item name="android:textColor">@color/font</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/how_to_content_font</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="ScoresList" parent="Fill">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:divider">#d0d0d0</item>
+        <item name="android:dividerHeight">1dp</item>
     </style>
 
 

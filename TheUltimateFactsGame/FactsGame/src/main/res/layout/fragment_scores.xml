@@ -5,7 +5,19 @@
 
     <TextView
         android:text="@string/scores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        style="@style/Title"
+        android:id="@+id/textViewScores" />
+
+    <TextView
+        style="@style/ScoresSubTitle"
+        android:text="@string/scores_desc"
+        android:layout_below="@+id/textViewScores"
+        android:id="@+id/textViewSubTitle" />
+
+    <ListView
+        style="@style/ScoresList"
+        android:id="@+id/listViewScores"
+        android:layout_below="@+id/textViewSubTitle"
+        tools:listitem="@layout/list_item_scores" />
 
 </RelativeLayout>

@@ -5,7 +5,7 @@
 
     <TextView
         android:text="@string/app_title"
-        style="@style/Title"
+        style="@style/AppTitle"
         android:id="@+id/textViewTitle" />
 
     <Button

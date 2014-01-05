@@ -21,7 +21,7 @@
     <string name="build_up_streaks_desc_one">The more questions you answer correctly in a row increases your current streak which gives you a better score.</string>
     <string name="build_up_streaks_desc_two">Each correct answer is multiplied by your current streak.</string>
     <string name="build_up_streaks_desc_three">Each question answered incorrectly resets your streak.</string>
-    <string name="scores_desc"> All hail the champions of champions, the cream of the crop, our leader…</string>
+    <string name="scores_desc"> All hail the champions of champions, the cream of the crop, our leaders…</string>
     <string name="title_activity_scores">Scores</string>
     <string name="title_activity_how_to_play">How To Play</string>
 
