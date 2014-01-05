@@ -16,6 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="ie.iamshanedoyle.factsgame.activities.GameActivity"
+            android:label="@string/title_activity_game"
+            android:parentActivityName="ie.iamshanedoyle.factsgame.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="HomeActivity" />
+        </activity>
+        <activity
+            android:name="ie.iamshanedoyle.factsgame.activities.ScoresActivity"
+            android:label="@string/title_activity_scores" >
+        </activity>
+        <activity
+            android:name="ie.iamshanedoyle.factsgame.activities.HowToPlayActivity"
+            android:label="@string/title_activity_how_to_play" >
+        </activity>
     </application>
 
 </manifest>

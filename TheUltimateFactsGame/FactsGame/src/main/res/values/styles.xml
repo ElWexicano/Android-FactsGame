@@ -67,9 +67,27 @@
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:textSize">@dimen/button_font</item>
         <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:drawablePadding">-32sp</item>
         <item name="android:layout_marginBottom">@dimen/button_margin_bottom</item>
         <item name="android:layout_marginLeft">@dimen/button_margin_sides</item>
         <item name="android:layout_marginRight">@dimen/button_margin_sides</item>
     </style>
+
+    <style name="GameInfo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/game_info_title_font</item>
+        <item name="android:textSize">@dimen/game_info_title_font</item>
+    </style>
+
+    <style name="GameInfo.Value">
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textColor">@color/game_info_value_font</item>
+        <item name="android:textSize">@dimen/game_info_value_font</item>
+    </style>
+
 
 </resources>

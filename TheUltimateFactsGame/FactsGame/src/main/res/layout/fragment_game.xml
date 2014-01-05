@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Container"
+    tools:context="ie.iamshanedoyle.factsgame.activities.GameActivity$PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/textViewScore"
+        android:text="@string/score"
+        android:layout_alignParentLeft="true"
+        style="@style/GameInfo" />
+
+    <TextView
+        android:id="@+id/textViewStreak"
+        android:text="@string/streak"
+        style="@style/GameInfo"
+        android:layout_alignParentRight="true"/>
+
+
+
+
+
+
+</RelativeLayout>
