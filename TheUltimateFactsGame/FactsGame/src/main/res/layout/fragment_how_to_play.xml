@@ -4,8 +4,14 @@
     tools:context="ie.iamshanedoyle.factsgame.activities.HowToPlayActivity$PlaceholderFragment">
 
     <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:text="@string/how_to_play"
+        style="@style/Title"
+        android:id="@+id/textViewHowTo" />
+
+    <TextView
+        style="@style/ScoresSubTitle"
+        android:text="@string/how_to_play_desc"
+        android:layout_below="@+id/textViewHowTo"
+        android:id="@+id/textViewSubTitle" />
 
 </RelativeLayout>
