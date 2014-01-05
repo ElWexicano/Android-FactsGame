@@ -1,0 +1,75 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:color">@color/title_font</item>
+    </style>
+
+
+    <style name="Match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="Wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Fill">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="MatchHeight" parent="Match">
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="MatchWidth" parent="Match">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="FillHeight" parent="Fill">
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="FillWidth" parent="Fill">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!-- Generic Styles - End -->
+
+    <style name="Container" parent="Match">
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="Title" parent="FillWidth">
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:color">@color/title_font</item>
+        <item name="android:textSize">@dimen/title_font</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/title_margin_bottom</item>
+        <item name="android:layout_marginTop">@dimen/title_margin_top</item>
+    </style>
+
+    <style name="Button" parent="FillWidth">
+        <item name="android:background">@color/button</item>
+        <item name="android:textColor">@color/button_font</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">@dimen/button_font</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">@dimen/button_margin_bottom</item>
+        <item name="android:layout_marginLeft">@dimen/button_margin_sides</item>
+        <item name="android:layout_marginRight">@dimen/button_margin_sides</item>
+    </style>
+
+</resources>

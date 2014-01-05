@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Container"
+    tools:context="ie.iamshanedoyle.factsgame.HomeActivity$PlaceholderFragment">
+
+    <TextView
+        android:text="@string/app_title"
+        style="@style/Title"
+        android:id="@+id/textViewTitle" />
+
+    <Button
+        style="@style/Button"
+        android:text="@string/play_now"
+        android:id="@+id/buttonPlayNow"
+        android:layout_below="@+id/textViewTitle" />
+
+    <Button
+        style="@style/Button"
+        android:text="@string/how_to_play"
+        android:id="@+id/buttonHowToPlay"
+        android:layout_below="@+id/buttonPlayNow" />
+
+    <Button
+        style="@style/Button"
+        android:text="@string/scores"
+        android:id="@+id/buttonScores"
+        android:layout_below="@+id/buttonHowToPlay"/>
+
+    <Button
+        style="@style/Button"
+        android:text="@string/settings"
+        android:id="@+id/buttonSettings"
+        android:layout_below="@+id/buttonScores" />
+
+</RelativeLayout>
