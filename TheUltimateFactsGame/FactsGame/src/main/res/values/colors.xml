@@ -3,9 +3,12 @@
 
     <color name="background">#ebebeb</color>
     <color name="button">#2c3e50</color>
+    <color name="button_pressed">#1e2a36</color>
     <color name="button_font">#ffffff</color>
     <color name="button_true">#18bc9c</color>
+    <color name="button_true_pressed">#14a185</color>
     <color name="button_false">#e74c3c</color>
+    <color name="button_false_pressed">#ef2612</color>
     <color name="title_font">#2c3e50</color>
     <color name="game_info_title_font">#7c7b7b</color>
     <color name="game_info_value_font">#f39c12</color>

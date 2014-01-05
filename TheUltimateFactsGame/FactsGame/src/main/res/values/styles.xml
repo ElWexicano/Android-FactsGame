@@ -61,7 +61,7 @@
     </style>
 
     <style name="Button" parent="FillWidth">
-        <item name="android:background">@color/button</item>
+        <item name="android:background">@drawable/button</item>
         <item name="android:textColor">@color/button_font</item>
         <item name="android:textStyle">normal</item>
         <item name="android:fontFamily">sans-serif-light</item>
