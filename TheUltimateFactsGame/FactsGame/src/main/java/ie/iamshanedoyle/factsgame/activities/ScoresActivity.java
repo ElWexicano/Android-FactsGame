@@ -8,8 +8,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import ie.iamshanedoyle.factsgame.R;
+import ie.iamshanedoyle.factsgame.adapters.ScoresAdapter;
+import ie.iamshanedoyle.factsgame.models.Score;
 
 public class ScoresActivity extends Activity {
 
@@ -25,31 +31,13 @@ public class ScoresActivity extends Activity {
         }
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.scores, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     /**
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {
+
+        private List<Score> mScores;
+        private ScoresAdapter mScoresAdapter;
 
         public PlaceholderFragment() {
         }
@@ -59,6 +47,24 @@ public class ScoresActivity extends Activity {
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_scores, container, false);
             return rootView;
+        }
+
+        @Override
+        public void onActivityCreated(Bundle savedInstanceState) {
+            super.onActivityCreated(savedInstanceState);
+
+            mScores = new ArrayList<Score>();
+
+            for (int i = 0; i < 30; i++) {
+                Score score = new Score("User "+i, 2*200-i);
+                mScores.add(score);
+            }
+
+            mScoresAdapter = new ScoresAdapter(getActivity(), mScores);
+
+            ListView scoresList = (ListView) getView().findViewById(R.id.listViewScores);
+
+            scoresList.setAdapter(mScoresAdapter);
         }
     }
 

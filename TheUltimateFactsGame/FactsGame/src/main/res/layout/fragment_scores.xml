@@ -18,6 +18,8 @@
         style="@style/ScoresList"
         android:id="@+id/listViewScores"
         android:layout_below="@+id/textViewSubTitle"
-        tools:listitem="@layout/list_item_scores" />
+        tools:listitem="@layout/list_item_scores"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbVertical="@drawable/scrollbar"/>
 
 </RelativeLayout>
