@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import ie.iamshanedoyle.factsgame.R;
 
+/**
+ * This activity represents that How To Play screen.
+ */
 public class HowToPlayActivity extends Activity {
 
     @Override
@@ -37,13 +40,16 @@ public class HowToPlayActivity extends Activity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_how_to_play, container, false);
-            return rootView;
+            return inflater.inflate(R.layout.fragment_how_to_play, container, false);
         }
 
         @Override
         public void onActivityCreated(Bundle savedInstanceState) {
             super.onActivityCreated(savedInstanceState);
+
+            if (getView() == null) {
+                return;
+            }
 
             TextView textViewSubTitle = (TextView) getView().findViewById(R.id.textViewSubTitle);
 
@@ -65,12 +71,10 @@ public class HowToPlayActivity extends Activity {
 
             spannableStringBuilder.setSpan(foregroundColorSpan, startPos-1, endPos, SpannableStringBuilder.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-            spannableStringBuilder.append(getString(R.string.score_points_desc) + lineBreak + lineBreak);
-
-            spannableStringBuilder.append(getString(R.string.build_up_streaks) + lineBreak);
-
-            spannableStringBuilder.append(getString(R.string.build_up_streaks_desc_one) + lineBreak + lineBreak);
-            spannableStringBuilder.append(getString(R.string.build_up_streaks_desc_two) + lineBreak + lineBreak);
+            spannableStringBuilder.append(getString(R.string.score_points_desc)).append(lineBreak).append(lineBreak);
+            spannableStringBuilder.append(getString(R.string.build_up_streaks)).append(lineBreak);
+            spannableStringBuilder.append(getString(R.string.build_up_streaks_desc_one)).append(lineBreak).append(lineBreak);
+            spannableStringBuilder.append(getString(R.string.build_up_streaks_desc_two)).append(lineBreak).append(lineBreak);
             spannableStringBuilder.append(getString(R.string.build_up_streaks_desc_three));
 
             textViewSubTitle.setText(spannableStringBuilder, TextView.BufferType.SPANNABLE);

@@ -10,7 +10,8 @@
         android:id="@+id/textViewScores"
         android:drawableLeft="@drawable/ic_up"
         android:drawablePadding="-6dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:clickable="true"/>
 
     <TextView
         style="@style/ScoresSubTitle"

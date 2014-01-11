@@ -8,9 +8,8 @@
         style="@style/Title"
         android:drawableLeft="@drawable/ic_up"
         android:drawablePadding="-6dp"
-        android:text="@string/how_to_play" />
-
-
+        android:text="@string/how_to_play"
+        android:clickable="true"/>
 
     <ScrollView
         style="@style/Fill"
