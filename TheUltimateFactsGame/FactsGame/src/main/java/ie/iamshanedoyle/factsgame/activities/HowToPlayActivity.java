@@ -51,6 +51,18 @@ public class HowToPlayActivity extends Activity {
                 return;
             }
 
+            TextView textViewHowTo = (TextView) getView().findViewById(R.id.textViewHowTo);
+            textViewHowTo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (getActivity() != null) {
+                        getActivity().onNavigateUp();
+                    }
+                }
+            });
+
+            // TODO tidy this shit up.
+
             TextView textViewSubTitle = (TextView) getView().findViewById(R.id.textViewSubTitle);
 
             String lineBreak = "\n";

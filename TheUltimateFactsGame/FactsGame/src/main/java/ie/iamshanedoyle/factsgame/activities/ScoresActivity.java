@@ -73,7 +73,6 @@ public class ScoresActivity extends Activity {
             scoresList.setAdapter(mScoresAdapter);
 
             TextView textViewScores = (TextView) getView().findViewById(R.id.textViewScores);
-
             textViewScores.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
