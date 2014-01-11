@@ -11,7 +11,8 @@
         android:drawableLeft="@drawable/ic_up"
         android:drawablePadding="-6dp"
         android:gravity="center"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:background="@drawable/title"/>
 
     <TextView
         style="@style/ScoresSubTitle"
@@ -32,6 +33,7 @@
         android:layout_below="@+id/divider"
         tools:listitem="@layout/list_item_scores"
         android:scrollbarStyle="outsideInset"
-        android:scrollbarThumbVertical="@drawable/scrollbar"/>
+        android:scrollbarThumbVertical="@drawable/scrollbar"
+        android:clickable="false"/>
 
 </RelativeLayout>

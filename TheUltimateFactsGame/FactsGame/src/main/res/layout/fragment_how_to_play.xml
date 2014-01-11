@@ -9,7 +9,8 @@
         android:drawableLeft="@drawable/ic_up"
         android:drawablePadding="-6dp"
         android:text="@string/how_to_play"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:background="@drawable/title"/>
 
     <ScrollView
         style="@style/Fill"

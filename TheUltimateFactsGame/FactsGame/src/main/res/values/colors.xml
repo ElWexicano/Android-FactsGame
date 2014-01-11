@@ -11,6 +11,7 @@
     <color name="button_false">#e74c3c</color>
     <color name="button_false_pressed">#ef2612</color>
     <color name="title_font">#2c3e50</color>
+    <color name="title_pressed">#d6d6d6</color>
     <color name="game_info_title_font">#7c7b7b</color>
     <color name="game_info_value_font">#f39c12</color>
     <color name="game_time_font">#3498db</color>
