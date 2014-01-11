@@ -3,11 +3,12 @@ package ie.iamshanedoyle.factsgame.activities;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import ie.iamshanedoyle.factsgame.R;
 
@@ -25,27 +26,6 @@ public class HowToPlayActivity extends Activity {
         }
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.how_to_play, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -56,10 +36,47 @@ public class HowToPlayActivity extends Activity {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+                                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_how_to_play, container, false);
             return rootView;
         }
+
+        @Override
+        public void onActivityCreated(Bundle savedInstanceState) {
+            super.onActivityCreated(savedInstanceState);
+
+            TextView textViewSubTitle = (TextView) getView().findViewById(R.id.textViewSubTitle);
+
+            String lineBreak = "\n";
+
+            SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(textViewSubTitle.getText());
+
+            spannableStringBuilder.append(lineBreak);
+            spannableStringBuilder.append(lineBreak);
+
+
+            String scorePoints = getString(R.string.score_points);
+            spannableStringBuilder.append(scorePoints + lineBreak);
+
+            int startPos = spannableStringBuilder.length() - scorePoints.length();
+            int endPos = spannableStringBuilder.length();
+
+            ForegroundColorSpan foregroundColorSpan = new ForegroundColorSpan(getResources().getColor(R.color.game_info_value_font));
+
+            spannableStringBuilder.setSpan(foregroundColorSpan, startPos-1, endPos, SpannableStringBuilder.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+            spannableStringBuilder.append(getString(R.string.score_points_desc) + lineBreak + lineBreak);
+
+            spannableStringBuilder.append(getString(R.string.build_up_streaks) + lineBreak);
+
+            spannableStringBuilder.append(getString(R.string.build_up_streaks_desc_one) + lineBreak + lineBreak);
+            spannableStringBuilder.append(getString(R.string.build_up_streaks_desc_two) + lineBreak + lineBreak);
+            spannableStringBuilder.append(getString(R.string.build_up_streaks_desc_three));
+
+            textViewSubTitle.setText(spannableStringBuilder, TextView.BufferType.SPANNABLE);
+
+        }
+
     }
 
 }

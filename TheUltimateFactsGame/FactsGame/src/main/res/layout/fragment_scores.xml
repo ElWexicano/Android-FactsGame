@@ -1,12 +1,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/Container"
     tools:context="ie.iamshanedoyle.factsgame.activities.ScoresActivity$PlaceholderFragment">
 
     <TextView
         android:text="@string/scores"
         style="@style/Title"
-        android:id="@+id/textViewScores" />
+        android:id="@+id/textViewScores"
+        android:drawableLeft="@drawable/ic_up"
+        android:drawablePadding="-6dp"
+        android:gravity="center"/>
 
     <TextView
         style="@style/ScoresSubTitle"
@@ -14,10 +18,17 @@
         android:layout_below="@+id/textViewScores"
         android:id="@+id/textViewSubTitle" />
 
+    <ie.iamshanedoyle.factsgame.views.DividerView
+        android:id="@+id/divider"
+        style="@style/DividerStyle"
+        app:orientation="horizontal"
+        app:thickness="3dp"
+        android:layout_below="@+id/textViewSubTitle" />
+
     <ListView
         style="@style/ScoresList"
         android:id="@+id/listViewScores"
-        android:layout_below="@+id/textViewSubTitle"
+        android:layout_below="@+id/divider"
         tools:listitem="@layout/list_item_scores"
         android:scrollbarStyle="outsideInset"
         android:scrollbarThumbVertical="@drawable/scrollbar"/>

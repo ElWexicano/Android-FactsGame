@@ -1,0 +1,10 @@
+<resources>
+    <declare-styleable name="DividerView">
+        <attr name="android:color"/>
+        <attr name="thickness" format="dimension" />
+        <attr name="orientation" format="enum">
+            <enum name="vertical" value="0"/>
+            <enum name="horizontal" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>
