@@ -6,21 +6,55 @@
     <TextView
         android:id="@+id/textViewHowTo"
         style="@style/Title"
+        android:background="@drawable/title"
+        android:clickable="true"
         android:drawableLeft="@drawable/ic_up"
         android:drawablePadding="-6dp"
-        android:text="@string/how_to_play"
-        android:clickable="true"
-        android:background="@drawable/title"/>
+        android:text="@string/how_to_play" />
 
     <ScrollView
+        android:id="@+id/scrollView"
         style="@style/Fill"
         android:layout_below="@+id/textViewHowTo">
 
-        <TextView
-            android:id="@+id/textViewSubTitle"
-            style="@style/ScoresSubTitle"
-            android:text="@string/how_to_play_desc" />
+        <LinearLayout
+            style="@style/Fill"
+            android:orientation="vertical">
 
+            <TextView
+                style="@style/ScoresSubTitle"
+                android:text="@string/how_to_play_desc" />
+
+            <TextView
+                style="@style/HowToTitles"
+                android:text="@string/score_points"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                style="@style/ScoresSubTitle"
+                android:text="@string/score_points_desc" />
+
+            <TextView
+                style="@style/HowToTitles"
+                android:text="@string/build_up_streaks"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                style="@style/ScoresSubTitle"
+                android:text="@string/build_up_streaks_desc_one"/>
+
+            <TextView
+                style="@style/ScoresSubTitle"
+                android:text="@string/build_up_streaks_desc_two"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                style="@style/ScoresSubTitle"
+                android:text="@string/build_up_streaks_desc_three"
+                android:layout_marginTop="15dp"/>
+
+        </LinearLayout>
     </ScrollView>
+
 
 </RelativeLayout>

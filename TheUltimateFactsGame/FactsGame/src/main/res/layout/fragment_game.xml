@@ -5,19 +5,35 @@
 
     <TextView
         android:id="@+id/textViewScore"
-        android:text="@string/score"
+        style="@style/GameInfo"
         android:layout_alignParentLeft="true"
-        style="@style/GameInfo" />
+        android:text="@string/score" />
 
     <TextView
         android:id="@+id/textViewStreak"
-        android:text="@string/streak"
         style="@style/GameInfo"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentRight="true"
+        android:text="@string/streak" />
 
 
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        style="@style/FillWidth"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/buttonTrue"
+            android:text="@string/true_text"
+            style="@style/TrueButton" />
 
+        <Button
+            android:id="@+id/buttonFalse"
+            android:text="@string/false_text"
+            style="@style/FalseButton" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>

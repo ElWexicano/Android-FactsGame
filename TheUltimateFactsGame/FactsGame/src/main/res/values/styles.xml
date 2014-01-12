@@ -144,5 +144,35 @@
         <item name="android:layout_marginBottom">@dimen/scores_divider_margin_bottom</item>
     </style>
 
+    <style name="QuestionButton">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:textColor">@color/button_font</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">@dimen/button_font</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="TrueButton" parent="QuestionButton">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginRight">@dimen/game_button_margin_sides</item>
+        <item name="android:background">@drawable/button_true</item>
+    </style>
+
+    <style name="FalseButton" parent="QuestionButton">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginLeft">@dimen/game_button_margin_sides</item>
+        <item name="android:background">@drawable/button_false</item>
+    </style>
+
+    <style name="HowToTitles" parent="ScoresSubTitle">
+        <item name="android:textColor">@color/game_info_value_font</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/how_to_title_font</item>
+    </style>
 
 </resources>

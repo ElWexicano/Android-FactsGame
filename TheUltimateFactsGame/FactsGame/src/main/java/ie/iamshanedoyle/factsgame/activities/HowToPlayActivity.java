@@ -5,6 +5,8 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
+import android.text.style.TextAppearanceSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,39 +62,6 @@ public class HowToPlayActivity extends Activity {
                     }
                 }
             });
-
-            // TODO tidy this shit up.
-
-            TextView textViewSubTitle = (TextView) getView().findViewById(R.id.textViewSubTitle);
-
-            String lineBreak = "\n";
-
-            SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(textViewSubTitle.getText());
-
-            spannableStringBuilder.append(lineBreak);
-            spannableStringBuilder.append(lineBreak);
-
-
-            String scorePoints = getString(R.string.score_points);
-            spannableStringBuilder.append(scorePoints + lineBreak);
-
-            int startPos = spannableStringBuilder.length() - scorePoints.length();
-            int endPos = spannableStringBuilder.length();
-
-            ForegroundColorSpan foregroundColorSpan = new ForegroundColorSpan(getResources().getColor(R.color.game_info_value_font));
-
-            spannableStringBuilder.setSpan(foregroundColorSpan, startPos-1, endPos, SpannableStringBuilder.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-            spannableStringBuilder.append(getString(R.string.score_points_desc)).append(lineBreak).append(lineBreak);
-            spannableStringBuilder.append(getString(R.string.build_up_streaks)).append(lineBreak);
-            spannableStringBuilder.append(getString(R.string.build_up_streaks_desc_one)).append(lineBreak).append(lineBreak);
-            spannableStringBuilder.append(getString(R.string.build_up_streaks_desc_two)).append(lineBreak).append(lineBreak);
-            spannableStringBuilder.append(getString(R.string.build_up_streaks_desc_three));
-
-            textViewSubTitle.setText(spannableStringBuilder, TextView.BufferType.SPANNABLE);
-
         }
-
     }
-
 }
