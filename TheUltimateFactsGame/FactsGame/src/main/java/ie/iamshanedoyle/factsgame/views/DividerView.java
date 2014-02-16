@@ -10,7 +10,7 @@ import android.view.View;
 import ie.iamshanedoyle.factsgame.R;
 
 /**
- * Created by shane on 11/01/2014.
+ * This custom view is a divider.
  */
 public class DividerView extends View {
 
@@ -25,16 +25,19 @@ public class DividerView extends View {
         TypedArray typedArray = context.obtainStyledAttributes(attrs,
                 R.styleable.DividerView, 0, 0);
 
+        if (typedArray == null) {
+            return;
+        }
+
         try {
             mColor = typedArray.getColor(0, android.R.color.darker_gray);
             mThickness = typedArray.getDimension(1, 2);
-            mIsVertical = typedArray.getInt(2, 0) == 0 ? true : false;
+            mIsVertical = typedArray.getInt(2, 0) == 0;
         } finally {
             typedArray.recycle();
         }
 
         init();
-
     }
 
     private void init() {

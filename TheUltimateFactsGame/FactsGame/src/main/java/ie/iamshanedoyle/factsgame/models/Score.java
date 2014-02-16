@@ -1,7 +1,7 @@
 package ie.iamshanedoyle.factsgame.models;
 
 /**
- * Created by shane on 06/01/2014.
+ * This is a score object.
  */
 public class Score {
     private String user;

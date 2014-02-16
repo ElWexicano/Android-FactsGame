@@ -13,7 +13,7 @@ import ie.iamshanedoyle.factsgame.R;
 import ie.iamshanedoyle.factsgame.models.Score;
 
 /**
- * Created by shane on 06/01/2014.
+ * The ScoresAdapter is used to display the scores.
  */
 public class ScoresAdapter extends ArrayAdapter<Score> {
 
@@ -63,6 +63,10 @@ public class ScoresAdapter extends ArrayAdapter<Score> {
         if (view == null) {
             LayoutInflater inflater = (LayoutInflater.from(getContext()));
             view = inflater.inflate(R.layout.list_item_scores, parent, false);
+
+            if (view == null) {
+                return null;
+            }
 
             viewHolder = new ViewHolder();
             viewHolder.textViewUser = (TextView) view.findViewById(R.id.textViewUser);

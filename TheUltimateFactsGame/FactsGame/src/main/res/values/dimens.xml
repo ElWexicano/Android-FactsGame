@@ -8,6 +8,7 @@
     <dimen name="game_info_title_font">12sp</dimen>
     <dimen name="game_info_value_font">22sp</dimen>
     <dimen name="game_time_font">27sp</dimen>
+    <dimen name="game_question_font">37sp</dimen>
     <dimen name="how_to_title_font">30sp</dimen>
     <dimen name="how_to_content_font">20sp</dimen>
     <dimen name="scores_user_font">18sp</dimen>

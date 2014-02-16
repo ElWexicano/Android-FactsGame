@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/Container"
     tools:context="ie.iamshanedoyle.factsgame.activities.GameActivity$PlaceholderFragment">
 
@@ -10,11 +11,47 @@
         android:text="@string/score" />
 
     <TextView
+        android:id="@+id/textViewScoreValue"
+        style="@style/GameInfoValue"
+        android:text="0"
+        android:layout_below="@+id/textViewScore"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
         android:id="@+id/textViewStreak"
         style="@style/GameInfo"
         android:layout_alignParentRight="true"
         android:text="@string/streak" />
 
+    <TextView
+        android:id="@+id/textViewStreakValue"
+        style="@style/GameInfoValue"
+        android:text="x0"
+        android:layout_below="@+id/textViewStreak"
+        android:layout_alignParentRight="true" />
+
+
+    <ie.iamshanedoyle.factsgame.views.CountdownTimerView
+        android:id="@+id/countdown_timer_view"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:text="99"
+        app:textColor="#3498db"
+        app:textSize="37sp"
+        app:barColor="#ebebeb"
+        app:barLength="60dp"
+        app:rimColor="#3498db"
+        app:barWidth="6dp"
+        app:rimWidth="6dp"
+        app:circleColor="#ebebeb"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textViewQuestion"
+        style="@style/GameQuestion"
+        android:text="A basketball game starts with a jumpball?"
+        android:layout_below="@+id/countdown_timer_view" />
 
     <LinearLayout
         android:id="@+id/buttonContainer"
@@ -35,5 +72,11 @@
 
     </LinearLayout>
 
+    <ImageView
+        style="@style/GameQuestionImage"
+        android:src="@drawable/image_basketball"
+        android:id="@+id/imageViewQuestion"
+        android:layout_below="@+id/textViewQuestion"
+        android:layout_above="@+id/buttonContainer"/>
 
 </RelativeLayout>

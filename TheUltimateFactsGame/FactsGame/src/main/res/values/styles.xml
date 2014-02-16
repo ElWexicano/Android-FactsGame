@@ -86,10 +86,27 @@
         <item name="android:textSize">@dimen/game_info_title_font</item>
     </style>
 
-    <style name="GameInfo.Value">
+
+    <style name="GameInfoValue" parent="GameInfo">
         <item name="android:fontFamily">sans-serif-thin</item>
         <item name="android:textColor">@color/game_info_value_font</item>
         <item name="android:textSize">@dimen/game_info_value_font</item>
+    </style>
+
+    <style name="GameQuestion">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textColor">@color/game_info_title_font</item>
+        <item name="android:textSize">@dimen/game_question_font</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="GameQuestionImage" parent="Fill">
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:scaleType">centerCrop</item>
     </style>
 
     <style name="ScoresSubTitle" parent="FillWidth">
@@ -173,6 +190,14 @@
         <item name="android:fontFamily">sans-serif-thin</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/how_to_title_font</item>
+    </style>
+
+    <style name="ScoresListItem" parent="MatchWidth">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
     </style>
 
 </resources>

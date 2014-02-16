@@ -1,7 +1,7 @@
 package ie.iamshanedoyle.factsgame;
 
 /**
- * Created by shane on 05/01/2014.
+ * This class contains all the project constants.
  */
 public class Constants {
 }

@@ -3,6 +3,7 @@ package ie.iamshanedoyle.factsgame.activities;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import ie.iamshanedoyle.factsgame.R;
+import ie.iamshanedoyle.factsgame.views.CountdownTimerView;
 
 public class GameActivity extends Activity {
 
@@ -25,31 +27,12 @@ public class GameActivity extends Activity {
         }
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.game, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+    public class PlaceholderFragment extends Fragment {
+
+        CountdownTimerView countdownTimerView;
 
         public PlaceholderFragment() {
         }
@@ -57,8 +40,35 @@ public class GameActivity extends Activity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_game, container, false);
-            return rootView;
+            return inflater.inflate(R.layout.fragment_game, container, false);
+        }
+
+        @Override
+        public void onActivityCreated(Bundle savedInstanceState) {
+            super.onActivityCreated(savedInstanceState);
+
+            countdownTimerView = (CountdownTimerView) getView().findViewById(R.id.countdown_timer_view);
+
+            new Thread() {
+                int i = 99;
+                @Override
+                public void run() {
+                    try {
+                        while (i-- >= 0) {
+                            Thread.sleep(1000);
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    countdownTimerView.incrementProgress(Integer.toString(i));
+                                }
+                            });
+                        }
+                    } catch (InterruptedException e) {
+                    }
+                }
+
+            }.start();
+
         }
     }
 
